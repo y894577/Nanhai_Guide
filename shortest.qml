@@ -246,11 +246,6 @@ Item {
 //                        object.y = -rectangle2.y;
 //                        map.destroy();
 //                    }
-                    var place = new Array
-                    place[0] = "正门"
-                    place[1] = "12"
-                    place[2] = ""
-                    place[3] = "aa"
 //                    route.text = model1.get(transmit_data_point.change_point
 //                            (comboBox1.currentIndex,comboBox2.currentIndex,0)).key+"->"
                     for(var j=0;j<visit.length-1;j++){
@@ -258,7 +253,7 @@ Item {
                                 (comboBox1.currentIndex,comboBox2.currentIndex,j)
                         var m = transmit_data_point.change_point
                                 (comboBox1.currentIndex,comboBox2.currentIndex,j+1)
-                        if(model1.get(n)==model1.get(m))
+                        if(model1.get(n) === model1.get(m))
                                 j=j+1;
                         route.text=route.text+model1.get(n).key+"->"
                         console.log("长度",transmit_data_point.change_point
@@ -266,6 +261,12 @@ Item {
                     }
                     route.text = route.text+model1.get(transmit_data_point.change_point
                             (comboBox1.currentIndex,comboBox2.currentIndex,visit.length-1)).key
+
+                    //显示最短距离
+                    visitlength.text = "最短路程为："
+                    visitlength.text +=
+                            transmit_data_length.receive_length
+                            (comboBox1.currentIndex,comboBox2.currentIndex)+"米";
 
                     //only for test
 //                    for(var i=0;i<3;i++){
@@ -324,10 +325,30 @@ Item {
                 id: transmit_data_point
                 onBegin: change_point(j);
             }
+            Main{
+                id: transmit_data_length
+                onBegin: receive_length(start,end);
+            }
+
             Text {
                 id: route
                 x: 100
-                y: 75
+                y: 40
+                width: 82
+                height: 46
+                color: "#9e1068"
+                text: ""
+                style: Text.Normal
+                font.weight: Font.Black
+                verticalAlignment: Text.AlignVCenter
+                horizontalAlignment: Text.AlignHCenter
+                font.pixelSize: 25
+                font.family: "微软雅黑"
+            }
+            Text{
+                id : visitlength
+                x: 100
+                y: 80
                 width: 82
                 height: 46
                 color: "#9e1068"

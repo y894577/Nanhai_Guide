@@ -22,7 +22,6 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     QUrl source("qrc:/mainwindow.qml");
-
 }
 
 MainWindow::~MainWindow()

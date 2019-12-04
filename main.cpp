@@ -29,7 +29,9 @@ int main(int argc, char *argv[])
 
     //主窗口
     MainWindow *view = new MainWindow();
+
     view->enter();
+
 
     return a.exec();
 }

@@ -7,6 +7,7 @@ Item {
     id: element2
     width: 400
     height: 400
+    property alias line8: line8
 
     Image {
         id: image
@@ -14,9 +15,131 @@ Item {
         y: -47
         width: 779
         height: 494
-        source: "img/map.png"
+        source: "qrc:/img/map.png"
         fillMode: Image.PreserveAspectFit
 
+        Rectangle {
+            id: from0to5
+            x: 163
+            y: 328
+            width: 110
+            height: 3
+            color: "#f5222d"
+            rotation: 50
+            visible: true
+        }
+
+        Rectangle {
+            id: from9to1
+            x: 263
+            y: 230
+            width: 40
+            height: 3
+            color: "#f5222d"
+            rotation: 60
+            visible: true
+        }
+
+        Rectangle {
+            id: from
+            x: 411
+            y: 311
+            width: 50
+            height: 3
+            color: "#f5222d"
+            rotation: 80
+            visible: true
+        }
+
+        Rectangle {
+            id: line7
+            x: 301
+            y: 258
+            width: 70
+            height: 3
+            color: "#f5222d"
+            rotation: 110
+            visible: true
+        }
+
+        Rectangle {
+            id: line8
+            x: 446
+            y: 298
+            width: 120
+            height: 3
+            color: "#f5222d"
+            rotation: 120
+            visible: true
+        }
+
+        Rectangle {
+            id: line10
+            x: 388
+            y: 130
+            width: 50
+            height: 3
+            color: "#f5222d"
+            rotation: 60
+            visible: true
+        }
+
+        Rectangle {
+            id: line11
+            x: 439
+            y: 198
+            width: 40
+            height: 3
+            color: "#f5222d"
+            rotation: 60
+            visible: true
+        }
+
+        Rectangle {
+            id: line12
+            x: 465
+            y: 246
+            width: 60
+            height: 3
+            color: "#f5222d"
+            rotation: 50
+            visible: true
+        }
+
+        Rectangle {
+            id: line13
+            x: 276
+            y: 273
+            width: 40
+            height: 3
+            color: "#f5222d"
+            rotation: 60
+            visible: true
+        }
+
+        Rectangle {
+            id: line14
+            x: 357
+            y: 254
+            width: 60
+            height: 3
+            color: "#f5222d"
+            rotation: 50
+            visible: true
+        }
+
+        Rectangle {
+            id: line15
+            x: 183
+            y: 246
+            width: 80
+            height: 3
+            color: "#f5222d"
+            rotation: 130
+            visible: true
+        }
+
+        //地点
         Rectangle {
             id: rectangle
             x: 215
@@ -38,15 +161,15 @@ Item {
                 verticalAlignment: Text.AlignVCenter
                 font.pixelSize: 19
             }
-            MouseArea{
-               anchors.fill: parent
-               onClicked: {
-//                   test1.test1();
-//                   rectangle.color = "red"
+            //            MouseArea{
+            //               anchors.fill: parent
+            //               onClicked: {
+            //                   test1.test1();
+            ////                   rectangle.color = "red"
 
-                   console.log("success");
-               }
-            }
+            //                   console.log("success");
+            //               }
+            //            }
         }
 
         Rectangle {
@@ -74,8 +197,8 @@ Item {
 
         Rectangle {
             id: rectangle3
-            x: 223
-            y: 188
+            x: 227
+            y: 187
             width: 63
             height: 35
             color: "#a7d3c4"
@@ -235,7 +358,7 @@ Item {
 
         Rectangle {
             id: rectangle19
-            x: 249
+            x: 251
             y: 238
             width: 63
             height: 35
@@ -302,103 +425,4 @@ Item {
             horizontalAlignment: Text.AlignHCenter
         }
     }
-
-    Rectangle {
-        id: short24
-        x: 24
-        y: 26
-        width: 131
-        height: 48
-        color: "#00aa7f"
-        radius: 20
-        border.width: 2
-
-        Text {
-            id: element
-            x: 20
-            y: 13
-            color: "#e1f4d7"
-            verticalAlignment: Text.AlignVCenter
-            horizontalAlignment: Text.AlignHCenter
-            renderType: Text.NativeRendering
-            font.pixelSize: 23
-        }
-
-        Text {
-            id: element1
-            x: 26
-            y: 14
-            color: "#e5ece4"
-            text: qsTr("最短路径")
-            styleColor: "#dce8e0"
-            font.pixelSize: 20
-        }
-        Main{
-            id: m
-            onBegin: shortest();
-        }
-        MouseArea{
-            anchors.fill: parent
-            onClicked: {
-                m.begin();
-                console.log("success")
-            }
-        }
-    }
-
-    Rectangle {
-        id: visit
-        x: 24
-        y: 91
-        width: 131
-        height: 48
-        color: "#00aa7f"
-        radius: 20
-        border.width: 2
-        Text {
-            id: element3
-            x: 20
-            y: 13
-            color: "#e1f4d7"
-            font.pixelSize: 23
-            renderType: Text.NativeRendering
-            verticalAlignment: Text.AlignVCenter
-            horizontalAlignment: Text.AlignHCenter
-        }
-
-        Text {
-            id: element4
-            x: 26
-            y: 14
-            color: "#e5ece4"
-            text: qsTr("浏览全校")
-            font.pixelSize: 20
-            styleColor: "#dce8e0"
-        }
-        MouseArea{
-            anchors.fill: parent
-            onClicked: {
-                visit_all.visit_all();
-            }
-        }
-        Main{
-            id:visit_all
-            onBegin: visit_all();
-        }
-    }
 }
-
-/*##^##
-Designer {
-    D{i:4;anchors_height:35;anchors_width:63;anchors_x:215;anchors_y:366}D{i:2;anchors_height:35;anchors_width:63;anchors_x:215;anchors_y:366}
-D{i:6;anchors_height:35;anchors_width:63;anchors_x:215;anchors_y:366}D{i:8;anchors_height:35;anchors_width:63;anchors_x:215;anchors_y:366}
-D{i:10;anchors_height:35;anchors_width:63;anchors_x:215;anchors_y:366}D{i:12;anchors_height:35;anchors_width:63;anchors_x:215;anchors_y:366}
-D{i:14;anchors_height:35;anchors_width:63;anchors_x:215;anchors_y:366}D{i:16;anchors_height:35;anchors_width:63;anchors_x:215;anchors_y:366}
-D{i:18;anchors_height:35;anchors_width:63;anchors_x:215;anchors_y:366}D{i:20;anchors_height:35;anchors_width:63;anchors_x:215;anchors_y:366}
-D{i:22;anchors_height:35;anchors_width:63;anchors_x:215;anchors_y:366}D{i:24;anchors_height:35;anchors_width:63;anchors_x:215;anchors_y:366}
-D{i:26;anchors_height:35;anchors_width:63;anchors_x:215;anchors_y:366}D{i:28;anchors_height:35;anchors_width:63;anchors_x:215;anchors_y:366}
-D{i:30;anchors_height:35;anchors_width:63;anchors_x:215;anchors_y:366}D{i:34;anchors_height:35;anchors_width:63;anchors_x:215;anchors_y:366}
-D{i:32;anchors_height:35;anchors_width:63;anchors_x:215;anchors_y:366}
-}
-##^##*/
-

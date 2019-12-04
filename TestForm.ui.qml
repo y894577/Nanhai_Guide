@@ -20,23 +20,12 @@ Item {
 
         Rectangle {
             id: from0to5
-            x: 175
+            x: 163
             y: 328
-            width: 95
-            height: 3
-            color: "#f5222d"
-            rotation: 50
-            visible: true
-        }
-
-        Rectangle {
-            id: from0to9
-            x: 212
-            y: 312
             width: 110
             height: 3
             color: "#f5222d"
-            rotation: 105
+            rotation: 50
             visible: true
         }
 
@@ -63,46 +52,24 @@ Item {
         }
 
         Rectangle {
-            id: line6
-            x: 294
-            y: 232
-            width: 40
-            height: 3
-            color: "#f5222d"
-            rotation: 130
-            visible: true
-        }
-
-        Rectangle {
             id: line7
-            x: 348
-            y: 298
-            width: 50
+            x: 301
+            y: 258
+            width: 70
             height: 3
             color: "#f5222d"
-            rotation: 140
+            rotation: 110
             visible: true
         }
 
         Rectangle {
             id: line8
-            x: 447
-            y: 270
-            width: 60
+            x: 446
+            y: 298
+            width: 120
             height: 3
             color: "#f5222d"
-            rotation: 160
-            visible: true
-        }
-
-        Rectangle {
-            id: line9
-            x: 374
-            y: 191
-            width: 50
-            height: 3
-            color: "#f5222d"
-            rotation: 140
+            rotation: 120
             visible: true
         }
 
@@ -141,8 +108,8 @@ Item {
 
         Rectangle {
             id: line13
-            x: 297
-            y: 271
+            x: 276
+            y: 273
             width: 40
             height: 3
             color: "#f5222d"
@@ -152,12 +119,12 @@ Item {
 
         Rectangle {
             id: line14
-            x: 364
-            y: 246
-            width: 40
+            x: 357
+            y: 254
+            width: 60
             height: 3
             color: "#f5222d"
-            rotation: 80
+            rotation: 50
             visible: true
         }
 
@@ -433,21 +400,6 @@ Item {
                 clip: false
                 horizontalAlignment: Text.AlignHCenter
             }
-        }
-
-        Text {
-            id: element5
-            x: 172
-            y: 75
-            width: 82
-            height: 46
-            color: "#9e1068"
-            text: qsTr("Text")
-            style: Text.Normal
-            font.weight: Font.Black
-            verticalAlignment: Text.AlignVCenter
-            horizontalAlignment: Text.AlignHCenter
-            font.pixelSize: 25
         }
     }
 

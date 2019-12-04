@@ -41,4 +41,8 @@ string Floyd::search_shortest(int start,int end){
     return path[start][end];
 }
 
+int Floyd::shortest_road_length(int start,int end){
+    return dist[start][end];
+}
+
 

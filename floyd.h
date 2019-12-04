@@ -11,6 +11,7 @@ public:
     Floyd(MGraph G);
     ~Floyd();
     string search_shortest(int start,int end);
+    int shortest_road_length(int start,int end);
 
 private:
     int dist[MaxSize][MaxSize];

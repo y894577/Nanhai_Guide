@@ -8,6 +8,7 @@
         <file>TestForm.ui.qml</file>
         <file>shortest.qml</file>
         <file>abc.qml</file>
+        <file>visit_all.qml</file>
     </qresource>
     <qresource prefix="/img">
         <file>welcome</file>

@@ -71,3 +71,17 @@ int MGraph::search_coodinate_x(int num){
 int MGraph::search_coodinate_y(int num){
     return coodinate[num][1];
 }
+
+void MGraph::DFS(int v){
+    char x[2];
+    x[0] = char(vertex[v]);
+    string tool(x,1);
+    shortest_road = shortest_road + tool;
+    qDebug()<<vertex<<vertex[v];
+    visited[v]=1;
+    for(int i=0;i<vertexNum;i++){
+        if(arc[v][i]<MAX_LENGTH && visited[i]==0){
+            DFS(i);
+        }
+    }
+}
