@@ -1,0 +1,17 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>Welcome.qml</file>
+        <file>WelcomeForm.ui.qml</file>
+        <file>map.qml</file>
+        <file>Test.qml</file>
+        <file>TestForm.ui.qml</file>
+        <file>shortest.qml</file>
+        <file>abc.qml</file>
+    </qresource>
+    <qresource prefix="/img">
+        <file>welcome</file>
+        <file>map.png</file>
+    </qresource>
+    <qresource prefix="/test"/>
+</RCC>
